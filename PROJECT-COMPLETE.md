@@ -38,10 +38,11 @@
 
 ## 📦 Deliverables
 
-### Primary File (Ready to Deploy)
+### Primary Files (Ready to Deploy)
 ```
-mpp-portal-scroll-complete.html (5.55 MB)
-└── Contains everything embedded - no external files needed
+index.html                        (5.55 MB) - For Rise direct upload
+mpp-portal-scroll-complete.html   (5.55 MB) - Alternative/Code Block embed
+└── Both contain everything embedded - no external files needed
 ```
 
 ### Documentation
@@ -230,7 +231,8 @@ python embed_assets.py
 
 ```
 MPP-Portal-Course/
-├── ⭐ mpp-portal-scroll-complete.html  (DEPLOY THIS FILE)
+├── ⭐ index.html                       (PRIMARY - Direct Upload to Rise)
+├── ⭐ mpp-portal-scroll-complete.html  (ALTERNATIVE - Code Block Embed)
 ├── Cover Page.png
 ├── README.md
 ├── TESTING-RESULTS.md

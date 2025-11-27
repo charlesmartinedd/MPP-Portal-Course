@@ -16,6 +16,14 @@ A complete, single-file HTML experience that simulates browsing the MPP Portal w
 
 ### For Articulate Rise Deployment
 
+**Method 1: Direct Upload (Recommended)**
+1. **Use the index.html file:**
+   ```
+   index.html (5.55 MB)
+   ```
+2. Upload directly to Articulate Rise as the home page
+
+**Method 2: Code Block Embed**
 1. **Open the complete file:**
    ```
    mpp-portal-scroll-complete.html (5.55 MB)
@@ -59,7 +67,8 @@ A complete, single-file HTML experience that simulates browsing the MPP Portal w
 
 ```
 MPP-Portal-Course/
-├── mpp-portal-scroll-complete.html    # 🎯 FINAL FILE - Deploy this to Rise
+├── index.html                          # 🎯 PRIMARY FILE - Use for Rise direct upload
+├── mpp-portal-scroll-complete.html    # Alternative - For Code Block embed
 ├── Cover Page.png                      # Original source image (8.24 MB)
 ├── README.md                           # This file
 ├── TESTING-RESULTS.md                  # Testing checklist and results

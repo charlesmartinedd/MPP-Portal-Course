@@ -3,9 +3,10 @@
 ## Quick Start (5 Minutes)
 
 ### Step 1: Get the HTML File
-The complete file is ready at:
+The complete files are ready at:
 ```
-MPP-Portal-Course/mpp-portal-scroll-complete.html
+MPP-Portal-Course/index.html                        (for Rise direct upload)
+MPP-Portal-Course/mpp-portal-scroll-complete.html   (alternative/backup)
 ```
 
 **File Details:**
@@ -13,7 +14,13 @@ MPP-Portal-Course/mpp-portal-scroll-complete.html
 - All assets embedded (no external files needed)
 - Optimized for Articulate Rise
 
-### Step 2: Open in Articulate Rise
+### Step 2: Deploy to Articulate Rise
+
+**Method 1: Direct Upload (Recommended for Rise)**
+1. Use the `index.html` file for Rise's home page requirement
+2. Upload as the main course file
+
+**Method 2: Code Block Embed**
 
 1. **Log in to Articulate Rise**
    - Go to https://rise.articulate.com

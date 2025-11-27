@@ -14,16 +14,25 @@ A complete, single-file HTML experience that simulates browsing the MPP Portal w
 
 ## 🚀 Quick Start
 
-### For Articulate Rise Deployment
+### For Articulate Rise Deployment (Recommended)
 
-**Method 1: Direct Upload (Recommended)**
-1. **Use the index.html file:**
+1. **Download the zip file:**
    ```
-   index.html (5.55 MB)
+   MPP-Portal-Scroll-for-Rise.zip (4.2 MB)
    ```
-2. Upload directly to Articulate Rise as the home page
 
-**Method 2: Code Block Embed**
+2. **Upload to Articulate Rise:**
+   - Log in to https://rise.articulate.com
+   - Click "Upload" or "Import"
+   - Select the zip file
+   - Rise will automatically detect `index.html`
+
+3. **Test and publish!**
+
+### Alternative: Code Block Embed
+
+For embedding in an existing Rise course:
+
 1. **Open the complete file:**
    ```
    mpp-portal-scroll-complete.html (5.55 MB)
@@ -67,7 +76,8 @@ A complete, single-file HTML experience that simulates browsing the MPP Portal w
 
 ```
 MPP-Portal-Course/
-├── index.html                          # 🎯 PRIMARY FILE - Use for Rise direct upload
+├── MPP-Portal-Scroll-for-Rise.zip     # 🎯 PRIMARY FILE - Upload this to Rise
+├── index.html                          # Contained in zip (5.55 MB)
 ├── mpp-portal-scroll-complete.html    # Alternative - For Code Block embed
 ├── Cover Page.png                      # Original source image (8.24 MB)
 ├── README.md                           # This file

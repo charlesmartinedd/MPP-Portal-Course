@@ -1,47 +1,30 @@
 # MPP Portal Interactive Scroll - Articulate Rise Deployment Guide
 
-## Quick Start (5 Minutes)
+## Quick Start (3 Minutes)
 
-### Step 1: Get the HTML File
-The complete files are ready at:
+### Step 1: Get the Zip File
+The complete package is ready at:
 ```
-MPP-Portal-Course/index.html                        (for Rise direct upload)
-MPP-Portal-Course/mpp-portal-scroll-complete.html   (alternative/backup)
+MPP-Portal-Course/MPP-Portal-Scroll-for-Rise.zip
 ```
 
 **File Details:**
-- Size: 5.55 MB
+- Contains: index.html (5.55 MB)
 - All assets embedded (no external files needed)
 - Optimized for Articulate Rise
 
-### Step 2: Deploy to Articulate Rise
-
-**Method 1: Direct Upload (Recommended for Rise)**
-1. Use the `index.html` file for Rise's home page requirement
-2. Upload as the main course file
-
-**Method 2: Code Block Embed**
+### Step 2: Upload to Articulate Rise
 
 1. **Log in to Articulate Rise**
    - Go to https://rise.articulate.com
-   - Open your course
+   - Navigate to your courses
 
-2. **Add a Code Block**
-   - Click "+ Add Block"
-   - Select "Embed" from the options
-   - Choose "Code"
+2. **Upload the Zip File**
+   - Click "Upload" or "Import"
+   - Select `MPP-Portal-Scroll-for-Rise.zip`
+   - Rise will automatically detect the `index.html` file
 
-3. **Paste the HTML**
-   - Open `mpp-portal-scroll-complete.html` in a text editor
-   - Select All (Ctrl+A) and Copy (Ctrl+C)
-   - Paste into the Rise Code Block
-
-4. **Configure the Block**
-   - Set height: **750px** (recommended)
-   - Click "Preview" to test
-   - Adjust height if needed (600px for compact, 800px for spacious)
-
-5. **Test the Interaction**
+3. **Test the Interaction**
    - Click the "Start Tour" button
    - Verify smooth scrolling (50 seconds)
    - Check that indicators appear at: 3s, 10s, 22s, 35s, 45s
@@ -53,6 +36,23 @@ MPP-Portal-Course/mpp-portal-scroll-complete.html   (alternative/backup)
 1. Click "Publish" in Rise
 2. Test in published output
 3. Verify on different devices (desktop, tablet, mobile)
+
+---
+
+## Alternative Method: Code Block Embed
+
+If you need to embed this in an existing Rise course:
+
+1. **Extract the HTML**
+   - Open `index.html` or `mpp-portal-scroll-complete.html` in a text editor
+   - Select All (Ctrl+A) and Copy (Ctrl+C)
+
+2. **In Articulate Rise:**
+   - Click "+ Add Block"
+   - Select "Embed" → "Code"
+   - Paste the HTML
+   - Set height: **750px**
+   - Preview and publish!
 
 ---
 

@@ -40,9 +40,12 @@
 
 ### Primary Files (Ready to Deploy)
 ```
-index.html                        (5.55 MB) - For Rise direct upload
-mpp-portal-scroll-complete.html   (5.55 MB) - Alternative/Code Block embed
-└── Both contain everything embedded - no external files needed
+MPP-Portal-Scroll-for-Rise.zip    (4.2 MB)  - 🎯 PRIMARY - Upload this to Rise
+├── Contains: index.html (5.55 MB)
+└── Rise automatically detects index.html
+
+mpp-portal-scroll-complete.html   (5.55 MB) - Alternative for Code Block embed
+└── All assets embedded - no external files needed
 ```
 
 ### Documentation
@@ -104,17 +107,23 @@ The HTML file has been opened in your browser. Please verify:
 
 ### Step 2: Deploy to Articulate Rise
 
-**Quick Instructions:**
+**Quick Instructions (Recommended Method):**
+
+1. Locate `MPP-Portal-Scroll-for-Rise.zip` (4.2 MB)
+2. Log in to Articulate Rise: https://rise.articulate.com
+3. Click "Upload" or "Import"
+4. Select the zip file
+5. Rise will automatically detect `index.html`
+6. Click "Preview" to test
+7. Publish your course!
+
+**Alternative Method (Code Block Embed):**
 
 1. Open `mpp-portal-scroll-complete.html` in a text editor
 2. Select All (Ctrl+A) and Copy (Ctrl+C)
-3. In Articulate Rise:
-   - Click "+ Add Block"
-   - Select "Embed" → "Code"
-   - Paste the HTML
-   - Set block height: **750px**
-4. Click "Preview" to test
-5. Publish your course!
+3. In Rise: Click "+ Add Block" → "Embed" → "Code"
+4. Paste HTML and set height: **750px**
+5. Preview and publish!
 
 **Detailed Instructions:** See `docs/DEPLOYMENT-GUIDE.md`
 
@@ -231,8 +240,9 @@ python embed_assets.py
 
 ```
 MPP-Portal-Course/
-├── ⭐ index.html                       (PRIMARY - Direct Upload to Rise)
-├── ⭐ mpp-portal-scroll-complete.html  (ALTERNATIVE - Code Block Embed)
+├── ⭐ MPP-Portal-Scroll-for-Rise.zip   (PRIMARY - Upload this to Rise!)
+├── index.html                          (Contained in zip)
+├── mpp-portal-scroll-complete.html     (Alternative - Code Block Embed)
 ├── Cover Page.png
 ├── README.md
 ├── TESTING-RESULTS.md

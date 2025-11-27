@@ -77,6 +77,62 @@
             transform: translateY(-1px);
         }
 
+        /* Restart Modal Styles - Reuses play modal design */
+        #restartModal.modal-overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(135deg, #1e3a5f 0%, #2a5082 100%);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            z-index: 1000;
+            animation: fadeIn 0.4s ease-out;
+        }
+
+        #restartModal .modal-content {
+            text-align: center;
+            color: white;
+            animation: slideUp 0.5s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+        }
+
+        #restartModal h1 {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+            font-weight: 300;
+        }
+
+        #restartModal p {
+            font-size: 1.1rem;
+            margin-bottom: 2rem;
+            opacity: 0.9;
+        }
+
+        #restartModalBtn.modal-button {
+            background: linear-gradient(135deg, #f0b900 0%, #d4a000 100%);
+            color: #1e3a5f;
+            border: none;
+            padding: 1.2rem 3rem;
+            font-size: 1.3rem;
+            font-weight: 600;
+            border-radius: 50px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 15px rgba(240, 185, 0, 0.4);
+        }
+
+        #restartModalBtn.modal-button:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 6px 20px rgba(240, 185, 0, 0.6);
+        }
+
+        #restartModalBtn.modal-button:active {
+            transform: translateY(-1px);
+        }
+
         /* Viewport Container */
         .viewport-container {
             position: fixed;
@@ -134,6 +190,11 @@
             width: 100%;
             height: 100%;
             filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.3));
+        }
+
+        /* IMPROVEMENT 1: Hide all visual indicators */
+        .indicator {
+            display: none !important;
         }
 
         /* Restart Button */
@@ -248,6 +309,17 @@
             <p>Discover the Mentor-Protégé Program Portal features</p>
             <button class="play-button" id="playButton" aria-label="Start interactive tour">
                 ▶ Start Tour
+            </button>
+        </div>
+    </div>
+
+    <!-- Restart Modal (appears at end) -->
+    <div id="restartModal" class="modal-overlay" style="display: none;" role="dialog" aria-modal="true" aria-labelledby="restartTitle">
+        <div class="modal-content">
+            <h1 id="restartTitle">Tour Complete!</h1>
+            <p>Experience the Mentor-Protégé Program Portal again</p>
+            <button id="restartModalBtn" class="modal-button" aria-label="Restart the MPP Portal tour">
+                ▶ Restart Tour
             </button>
         </div>
     </div>
@@ -390,6 +462,19 @@
                 this.elements.playButton.addEventListener('click', () => this.startTour());
                 this.elements.restartButton.addEventListener('click', () => this.restart());
 
+                // Restart modal button event listener
+                const restartModalBtn = document.getElementById('restartModalBtn');
+                if (restartModalBtn) {
+                    restartModalBtn.addEventListener('click', () => this.restart());
+
+                    restartModalBtn.addEventListener('keydown', (e) => {
+                        if (e.key === 'Enter' || e.key === ' ') {
+                            e.preventDefault();
+                            this.restart();
+                        }
+                    });
+                }
+
                 // Keyboard navigation
                 document.addEventListener('keydown', (e) => {
                     if (!this.state.isAnimating && (e.key === 'Enter' || e.key === ' ')) {
@@ -498,11 +583,23 @@
                 this.state.isAnimating = false;
 
                 // Announce completion
-                this.elements.tourStatus.textContent = 'Tour complete';
+                this.elements.tourStatus.textContent = 'Tour complete. Click Restart Tour to experience again.';
 
-                // Show restart button after brief pause
+                // Hide old restart button
+                this.elements.restartButton.classList.remove('visible');
+
+                // Show elegant restart modal after brief pause
                 setTimeout(() => {
-                    this.elements.restartButton.classList.add('visible');
+                    const restartModal = document.getElementById('restartModal');
+                    restartModal.style.display = 'flex';
+                    restartModal.style.opacity = '0';
+
+                    requestAnimationFrame(() => {
+                        restartModal.style.transition = 'opacity 0.5s ease-in-out';
+                        restartModal.style.opacity = '1';
+                    });
+
+                    document.getElementById('restartModalBtn').focus();
                 }, 500);
             }
 
@@ -537,11 +634,20 @@
                 this.elements.viewportContainer.classList.remove('visible');
                 this.elements.restartButton.classList.remove('visible');
 
+                // Hide restart modal
+                const restartModal = document.getElementById('restartModal');
+                if (restartModal) {
+                    restartModal.style.display = 'none';
+                }
+
                 // Show play button
                 this.elements.playContainer.classList.remove('hidden');
 
+                // Focus on play button for accessibility
+                this.elements.playButton.focus();
+
                 // Announce to screen readers
-                this.elements.tourStatus.textContent = 'Tour reset to beginning';
+                this.elements.tourStatus.textContent = 'Tour restarted. Click Start Tour to begin again.';
             }
         }
 

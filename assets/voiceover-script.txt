@@ -1,0 +1,27 @@
+MPP Portal Interactive Scroll - Voiceover Script
+Duration: 50 seconds
+Voice: en-US-GuyNeural (Edge-TTS)
+Speaking Rate: 1.1x (110%)
+
+===== SCRIPT =====
+
+Welcome to the Mentor-Protégé Program Portal — your gateway to transformative defense contracting partnerships.
+
+Mentors shape careers through subcontracting partnerships, networking opportunities, and earning credit toward small business goals.
+
+Protégés receive guidance from prime contractors in business development, technical capabilities, and federal procurement with hands-on support.
+
+Join the annual MPP Summit where mentors and protégés connect to build relationships and discover new collaboration opportunities.
+
+Ready to get connected? Submit your information and our Program Office will guide you through the next steps.
+
+===== END SCRIPT =====
+
+Word Count: 82 words
+Target Duration: ~50 seconds at 1.1x speed
+Visual Indicators Sync:
+- 3s: JOIN NOW button
+- 10s: Subcontracting pool icon
+- 22s: Technical education icon
+- 35s: MPP Summit logo
+- 45s: Contact form
